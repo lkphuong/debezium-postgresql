@@ -1,0 +1,21 @@
+{
+    "name": "postgres-connector",
+    "config": {
+      "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+      "database.hostname": "host.docker.internal", 
+      "database.port": "5432",
+      "database.user": "dev",
+      "database.password": "123456",
+      "database.dbname": "dictionary_zim",
+      "database.server.name": "dbserver1",
+      "plugin.name": "pgoutput",
+      "slot.name": "debezium_slot",
+      "publication.name": "dbz_publication",
+      "database.history.kafka.bootstrap.servers": "kafka:9092",
+      "database.history.kafka.topic": "schema-changes.postgres",
+      "topic.prefix": "dbserver1",
+      "table.include.list": "public.*"
+
+    }
+  }
+  
